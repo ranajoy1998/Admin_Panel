@@ -1,0 +1,37 @@
+<br><br>
+<div class="container"> 
+    <table class="table table-bordered table-striped table-hover mx-auto">
+            <caption>List of Foods</caption>
+        <thead class="thead-dark">
+            <tr>
+            <th scope="col">No.</th>
+            <th scope="col">Category ID</th>
+            <th scope="col">Food Name</th>
+            <th scope="col">Food Description</th>
+            <th scope="col">Price</th>
+            <th scope="col">Picture</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let fd of foodService.foods; let i = index">
+            <th scope="row">{{i + 1}}</th>
+            <td>{{fd.category_id}}</td>
+            <td>{{fd.fname}}</td>
+            <td>{{fd.fdesc}}</td>
+            <td>{{fd.fprice}}</td>
+            <td>{{fd.fpic}}</td>
+            <td class="text-center" style="background-color:white; border-color: white; width: 20px; padding-left: 28px">
+                <button type="button" class="btn btn-warning mx-auto" (click)="navigate(fd)">EDIT</button>
+            </td>
+            <td class="text-center" style="background-color:white; border-color: white; width: 20px">
+                <button type="button" class="btn btn-danger mx-auto" (click)="delete(fd._id)">DELETE</button>
+            </td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="text-center">
+        <button type="button" class="btn btn-outline-success text-center" (click)="getfoods()">View</button>
+    </div>
+</div>
+
+<router-outlet></router-outlet>

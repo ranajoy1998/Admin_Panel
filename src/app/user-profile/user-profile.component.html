@@ -1,0 +1,107 @@
+<!-- <nav class="navbar navbar-expand-sm bg-dark navbar-dark"> -->
+    <!-- Brand -->
+    <!-- <a class="navbar-brand" href="#">
+      <img src="favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="">
+      Fooches
+    </a> -->
+    <!-- Links -->
+    <!-- <ul class="navbar-nav"> -->
+     
+      <!-- Dropdown -->
+      <!--<li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          Category
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" routerLink="AddCategory">Add Category</a>
+          <a class="dropdown-item" routerLink="ViewCategory">View Category</a>
+        </div>
+      </li> -->
+
+      <!--Food Menu-->
+      <!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+          Food
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" routerLink="AddFood">Add Food</a>
+          <a class="dropdown-item" routerLink="ViewFood">View Food</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="reguser">View User</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="booking">View Booking</a>
+      </li> -->
+      <!--End Food Menu-->
+      <!-- <li *ngIf="aduserDetails" class="nav-item dropdown ">
+        <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" style="color:aquamarine">
+          Welcome Admin: {{aduserDetails.fullName.split(' ')[0]}}
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" (click)="onLogout()">Log Out</a>
+        </div>
+      </li>
+
+    </ul>
+  </nav>
+<router-outlet></router-outlet> -->
+
+<div class="navbar navbar-expand navbar-dark flex-column flex-md-row bd-navbar" style="background-color:purple">
+  <a class="navbar-brand mr-0 mr-md-2" href="/userprofile" aria-label="Bootstrap">
+    <img src="favicon.ico" width="30" height="30" class="d-inline-block align-top" alt="">
+  </a>
+
+  <div class="navbar-nav-scroll">
+    <ul class="navbar-nav bd-navbar-nav flex-row">
+      <li class="nav-item">
+        <a class="nav-link active" routerLink="home">Home<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Category
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+          <a class="dropdown-item" routerLink="viewcategory">View Categories</a>
+          <a class="dropdown-item" routerLink="addcategory">Add Categories</a>
+          <!-- <div class="dropdown-divider"></div> -->
+        </div>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-item nav-link dropdown-toggle mr-md-2" href="#" id="bd-versions" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Food
+        </a>
+        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="bd-versions">
+          <a class="dropdown-item" routerLink="viewfood">View Foods</a>
+          <a class="dropdown-item" routerLink="addfood">Add Foods</a>
+          <!-- <div class="dropdown-divider"></div> -->
+        </div>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="viewusers">Users</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link " routerLink="viewbookings">Bookings</a>
+      </li>
+      <span class="d-md-none">
+          <li class="nav-item">
+            <a class="nav-link" (click)="onLogout()">Logout</a>
+          </li>
+      </span>
+    </ul>
+  </div>
+
+  <ul class="navbar-nav flex-row ml-md-auto d-none d-md-flex">
+    <li *ngIf="aduserDetails" class="nav-item dropdown ">
+      <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown" style="color:aquamarine">
+        Welcome Admin: {{aduserDetails.fullName.split(' ')[0]}}
+      </a>
+      <div class="dropdown-menu dropdown-menu-right">
+        <a class="dropdown-item" (click)="onLogout()">Log Out</a>
+      </div>
+    </li>
+  </ul>
+</div>
+
+<router-outlet></router-outlet>

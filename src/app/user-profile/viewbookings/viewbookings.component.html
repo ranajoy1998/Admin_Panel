@@ -1,0 +1,35 @@
+<br><br>
+<div class="container"> 
+    <table class="table table-bordered table-striped table-hover mx-auto">
+            <caption>List of Bookings</caption>
+        <thead class="thead-dark">
+            <tr>
+            <th scope="col">No.</th>
+            <th scope="col">Food Name</th>
+            <th scope="col">Food Description</th>
+            <th scope="col">Customer Name</th>
+            <th scope="col">Customer Address</th>
+            <th scope="col">Customer Phone</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Price</th>
+            <th scope="col">Booking Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor = "let bks of bookingService.bookings; let i = index">
+            <th scope="row">{{i + 1}}</th>
+            <td>{{bks.fname}}</td>
+            <td>{{bks.fdesc}}</td>
+            <td>{{bks.cname}}</td>
+            <td>{{bks.caddress}}</td>
+            <td>{{bks.cphone}}</td>
+            <td>{{bks.quantity}}</td>
+            <td>{{bks.price}}</td>
+            <td>{{bks.date}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div class="text-center">
+        <button type="button" class="btn btn-outline-success text-center" (click)="getbookings()">View</button>
+    </div>
+</div>

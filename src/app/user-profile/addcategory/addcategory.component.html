@@ -1,0 +1,21 @@
+<br><br><br><br>
+<form class="container border border-primary" style="padding: 40px" #categoryform = 'ngForm' (ngSubmit)="postcategories(categoryform)">
+    <div class="form-group">
+        <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="categoryService.SelectedCategory._id">
+    </div>
+    <div class="form-group">
+        <label>Category ID</label>
+        <input type="text" name="category_id" #category_id="ngModel" [(ngModel)]="categoryService.SelectedCategory.category_id" class="form-control" placeholder="Enter Category ID">
+        <small class="form-text text-muted">Should be same as food's category id.</small>
+    </div>
+    <div class="form-group">
+        <label>Category Name</label>
+        <input type="text" name="category_name" #category_name="ngModel" [(ngModel)]="categoryService.SelectedCategory.category_name" class="form-control" placeholder="Enter Category Name">
+    </div>
+    <div class="text-center" style="padding-top: 10px">
+        <button type="submit" class="btn btn-outline-success text-center">Submit</button>
+    </div>
+    <div class="text-center" style="padding-top: 20px">
+        <button type="submit" class="btn btn-outline-warning text-center" (click)="resetForm(categoryform)">Reset</button>
+    </div>
+</form>

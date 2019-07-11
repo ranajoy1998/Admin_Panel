@@ -1,0 +1,35 @@
+<br><br><br><br>
+<form class="container border border-primary" style="padding: 40px" #foodform = 'ngForm' (ngSubmit)="postfoods(foodform)">
+    <div class="form-group">
+        <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="foodService.SelectedFood._id">
+    </div>
+    <div class="form-group">
+        <label>Category ID</label>
+        <input type="text" name="category_id" #category_id="ngModel" [(ngModel)]="foodService.SelectedFood.category_id" class="form-control" placeholder="Enter Category ID">
+        <small class="form-text text-muted">Should be same as Category's category id.</small>
+    </div>
+    <div class="form-group">
+        <label>Food Name</label>
+        <input type="text" name="fname" #fname="ngModel" [(ngModel)]="foodService.SelectedFood.fname" class="form-control" placeholder="Enter Food Name">
+    </div>
+    <div class="form-group">
+        <label>Food Description</label>
+        <input type="text" name="fdesc" #fdesc="ngModel" [(ngModel)]="foodService.SelectedFood.fdesc" class="form-control" placeholder="Enter Food Description">
+    </div>
+    <div class="form-group">
+        <label>Price</label>
+        <input type="number" name="fprice" #fprice="ngModel" [(ngModel)]="foodService.SelectedFood.fprice" class="form-control" placeholder="Enter Food Price">
+    </div>
+    <div class="form-group">
+        <label for="fileupload">Upload Image</label>
+        <input type="file" class="form-control-file" id="fileupload">
+    </div>
+    <div class="text-center" style="padding-top: 10px">
+        <button type="submit" class="btn btn-outline-success text-center">Submit</button>
+    </div>
+    <div class="text-center" style="padding-top: 20px">
+        <button type="submit" class="btn btn-outline-warning text-center" (click)="resetForm(foodform)">Reset</button>
+    </div>
+</form>
+<br><br><br>
+<router-outlet></router-outlet>

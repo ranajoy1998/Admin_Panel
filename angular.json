@@ -115,6 +115,7 @@
           }
         }
       }
-    }},
-  "defaultProject": "MyApp4"
+    }
+  },
+  "defaultProject": "MyApp4",
 }
