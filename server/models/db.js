@@ -15,3 +15,4 @@ mongoose.connect('mongodb://localhost:27017/Food', {useNewUrlParser: true}, (err
 });
 
 require('./aduser.model');
+require('./user.model');

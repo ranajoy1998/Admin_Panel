@@ -2,6 +2,10 @@ require('./config/config');
 require('./models/db');
 require('./config/passportConfig');
 
+var categoryController = require('./controllers/categoryController');
+var foodController = require('./controllers/foodController');
+var ordersController = require('./controllers/ordersController');
+
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
@@ -17,6 +21,9 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 app.use(passport.initialize());
 app.use('/api', rtsIndex);
+app.use('/categories', categoryController);
+app.use('/foods', foodController);
+app.use('/orders', ordersController);
 
 app.use((err, req, res, next) => {
     if (err.name === 'ValidationError') {
