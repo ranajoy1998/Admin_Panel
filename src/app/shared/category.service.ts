@@ -17,7 +17,7 @@ export class CategoryService {
     category_name: ''
   };
   categories: Category[];
-  baseUrl = "http://localhost:3001/";
+  baseUrl = "http://localhost:3200/";
 
   getCategories() {
     return this.http.get(this.baseUrl + "categories");

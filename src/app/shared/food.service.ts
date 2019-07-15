@@ -23,7 +23,7 @@ export class FoodService {
     fpic: ''
   };
   foods: Food[];
-  baseUrl = "http://localhost:3002/";
+  baseUrl = "http://localhost:3200/";
 
   getFoods() {
     return this.http.get(this.baseUrl + "foods");

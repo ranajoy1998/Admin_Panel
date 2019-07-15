@@ -20,7 +20,7 @@ export class BookingService {
   };
   
   bookings: Booking[];
-  baseUrl = "http://localhost:3004/";
+  baseUrl = "http://localhost:3200/";
 
   getBookings() {
     return this.http.get(this.baseUrl + "orders");

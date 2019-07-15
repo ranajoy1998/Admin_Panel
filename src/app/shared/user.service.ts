@@ -15,7 +15,7 @@ export class UserService {
   };
   
   users: User[];
-  baseUrl = "http://localhost:3003/api/";
+  baseUrl = "http://localhost:3200/api/";
 
   getUsers() {
     return this.http.get(this.baseUrl + "users");
