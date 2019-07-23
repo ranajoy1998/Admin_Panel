@@ -21,6 +21,7 @@ export class UserProfileComponent implements OnInit {
         
       }
     );
+    this.router.navigateByUrl('/userprofile/home');
   }
 
   onLogout(){
