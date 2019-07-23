@@ -20,7 +20,7 @@ export class AddcategoryComponent implements OnInit {
 
   ngOnInit() {
     if(this.aduserService.isLoggedIn())
-      this.router.navigateByUrl('/addcategory');
+      this.router.navigateByUrl('/userprofile/addcategory');
     
     if(!(this.categoryService.PassedCategory._id === '')) {
       this.categoryService.SelectedCategory = this.categoryService.PassedCategory;
@@ -48,6 +48,7 @@ export class AddcategoryComponent implements OnInit {
       this.categoryService.postCategories(form.value).subscribe(
         res=>{
           this.getcategories();
+          alert('Category added Successfully');
         },
         err=>{
 
@@ -58,9 +59,11 @@ export class AddcategoryComponent implements OnInit {
       this.categoryService.updateCategory(form.value).subscribe(
         res=>{
           this.getcategories();
+          alert('Category Updated Successfully');
         }
       );
     }
+    this.router.navigateByUrl('userprofile/viewcategory');
   }
 
   update(ctgry: Category) {

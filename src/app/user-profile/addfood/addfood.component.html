@@ -4,9 +4,13 @@
         <input type="hidden" name="_id" #_id="ngModel" [(ngModel)]="foodService.SelectedFood._id">
     </div>
     <div class="form-group">
-        <label>Category ID</label>
-        <input type="text" name="category_id" #category_id="ngModel" [(ngModel)]="foodService.SelectedFood.category_id" class="form-control" placeholder="Enter Category ID">
-        <small class="form-text text-muted">Should be same as Category's category id.</small>
+        <label>Category Name</label>
+        <!-- <input type="text" name="category_id" #category_id="ngModel" [(ngModel)]="foodService.SelectedFood.category_id" class="form-control" placeholder="Enter Category ID"> -->
+        <select name="category_id" #category_id="ngModel" [(ngModel)]="foodService.SelectedFood.category_id" class="form-control"> 
+            <option [selected]="foodService.SelectedFood.category_id == 'select'" [value]="select">Select a Category</option>  
+            <option  *ngFor="let cat of categoryService.categories" [value]="cat.category_id">{{cat.category_name}}</option>
+        </select>
+        <small class="form-text text-muted">Should be an existing category.</small>
     </div>
     <div class="form-group">
         <label>Food Name</label>
@@ -21,8 +25,8 @@
         <input type="number" name="fprice" #fprice="ngModel" [(ngModel)]="foodService.SelectedFood.fprice" class="form-control" placeholder="Enter Food Price">
     </div>
     <div class="form-group">
-        <label for="fileupload">Upload Image</label>
-        <input type="file" class="form-control-file" id="fileupload">
+        <label for="inputdefault">Upload Image</label>
+        <input type="file" name="fpic"  [(ngModel)]="selectedFood.fpic" class="form-control" id="inputdefault" (change)="onfileselect($event)">
     </div>
     <div class="text-center" style="padding-top: 10px">
         <button type="submit" class="btn btn-outline-success text-center">Submit</button>

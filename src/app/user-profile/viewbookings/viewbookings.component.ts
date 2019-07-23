@@ -15,7 +15,7 @@ export class ViewbookingsComponent implements OnInit {
   
   ngOnInit() {
     if(this.aduserService.isLoggedIn())
-      this.router.navigateByUrl('/viewbookings');
+      this.router.navigateByUrl('/userprofile/viewbookings');
   }
   getbookings() {
     this.bookingService.getBookings().subscribe(

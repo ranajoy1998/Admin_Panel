@@ -15,11 +15,11 @@
         <tbody>
             <tr *ngFor = "let fd of foodService.foods; let i = index">
             <th scope="row">{{i + 1}}</th>
-            <td>{{fd.category_id}}</td>
+            <ng-container *ngFor = "let cat of foodService.cats"><td *ngIf = "fd.category_id === cat.category_id">{{cat.category_name}}</td></ng-container>
             <td>{{fd.fname}}</td>
             <td>{{fd.fdesc}}</td>
             <td>{{fd.fprice}}</td>
-            <td>{{fd.fpic}}</td>
+            <td><img [src]="getSafeUrl(fd.fpic)" height="100" width="100"></td>
             <td class="text-center" style="background-color:white; border-color: white; width: 20px; padding-left: 28px">
                 <button type="button" class="btn btn-warning mx-auto" (click)="navigate(fd)">EDIT</button>
             </td>
@@ -30,7 +30,7 @@
         </tbody>
     </table>
     <div class="text-center">
-        <button type="button" class="btn btn-outline-success text-center" (click)="getfoods()">View</button>
+        <button type="button" class="btn btn-outline-success text-center" (click)="getfoods(); getcatname()">View</button>
     </div>
 </div>
 <br><br><br>

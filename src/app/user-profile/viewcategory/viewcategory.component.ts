@@ -14,7 +14,7 @@ export class ViewcategoryComponent implements OnInit {
   
   ngOnInit() {
     if(this.aduserService.isLoggedIn())
-      this.router.navigateByUrl('/viewcategory');
+      this.router.navigateByUrl('/userprofile/viewcategory');
   }
   getcategories() {
     this.categoryService.getCategories().subscribe(

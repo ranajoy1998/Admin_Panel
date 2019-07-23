@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Food } from './food.model';
+import { Category } from './category.model';
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +24,12 @@ export class FoodService {
     fpic: ''
   };
   foods: Food[];
+  cats: Category[];
   baseUrl = "http://localhost:3200/";
+
+  getCategories() {
+    return this.http.get(this.baseUrl + "categories");
+  }
 
   getFoods() {
     return this.http.get(this.baseUrl + "foods");

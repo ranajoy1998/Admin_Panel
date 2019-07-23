@@ -26,7 +26,7 @@ module.exports.registeruser = (req, res, next) => {
 
 module.exports.authenticateuser = (req, res, next) => {
 
-    passport.authenticate('local', (err, user, info) => {
+    passport.authenticate('local1', (err, user, info) => {
 
         if (err) return res.status(400).json(err);
 
