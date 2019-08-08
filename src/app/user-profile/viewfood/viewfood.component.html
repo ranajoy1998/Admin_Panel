@@ -35,43 +35,4 @@
 </div>
 <br><br><br>
 
-<div class="card-deck">
-<div class="card" *ngFor = "let fd of foodService.foods | slice:0:4">
-    <img class="card-img-top" src="{{fd.fpic}}" alt="Card image cap">
-    
-    <div class="card-body">
-        <h5 class="card-title">{{fd.fname}}</h5>
-        <button type="button" class="btn btn-danger bmd-btn-fab">
-                <i class="material-icons">add</i>
-            </button>
-        <p class="card-text">{{fd.fdesc}}</p>
-    </div>
-    <div class="card-footer">
-        <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-</div>
-<!-- <div class="card">
-    <img class="card-img-top" src="{{fd.fpic}}" alt="Card image cap">
-    <div class="card-body">
-    <h5 class="card-title">{{fd.fname}}</h5>
-    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-    <p class="card-text">{{fd.fdesc}}</p>
-    </div>
-    <div class="card-footer">
-    <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-</div>
-<div class="card">
-    <img class="card-img-top" src="{{fd.fpic}}" alt="Card image cap">
-    <div class="card-body">
-    <h5 class="card-title">{{fd.fname}}</h5>
-    <a class="btn-floating halfway-fab waves-effect waves-light red"><i class="material-icons">add</i></a>
-    <p class="card-text">{{fd.fdesc}}</p>
-    </div>
-    <div class="card-footer">
-    <small class="text-muted">Last updated 3 mins ago</small>
-    </div>
-</div> -->
-</div>
-
 <router-outlet></router-outlet>

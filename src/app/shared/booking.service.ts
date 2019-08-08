@@ -8,14 +8,14 @@ import { Booking } from './booking.model';
 export class BookingService {
   SelectedBooking: Booking={
     _id: '',
-    fname: '',
-    fdesc: '',
+    fname: [],
+    fdesc: [],
     cname: '',
     cemail: '',
     cphone: '',
     caddress: '',
-    quantity: '',
-    price: '',
+    quantity: [],
+    price: 0,
     date: null
   };
   

@@ -26,6 +26,7 @@ import { ViewusersComponent } from './user-profile/viewusers/viewusers.component
 import { ViewbookingsComponent } from './user-profile/viewbookings/viewbookings.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent } from './user-profile/home/home.component';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,7 @@ import { HomeComponent } from './user-profile/home/home.component';
     provide: HTTP_INTERCEPTORS,
     useClass: AuthInterceptor,
     multi: true
-  }, AuthGuard, AduserService],
+  }, AuthGuard, DatePipe, AduserService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

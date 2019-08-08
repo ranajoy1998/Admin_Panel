@@ -1,14 +1,14 @@
 const mongoose = require('mongoose');
 
 var Order = mongoose.model('Order', {
-    fname: { type: String },
-    fdesc: { type: String },
+    fname: { type: Array },
+    fdesc: { type: Array },
     cname: { type: String },
     cemail: { type: String },
     cphone: { type: String },
     caddress: { type: String },
-    quantity: { type: String },
-    price: { type: String },
+    quantity: { type: Array },
+    price: { type: Number },
     date: { type: Date }
 });
 
