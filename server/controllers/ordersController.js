@@ -22,6 +22,18 @@ router.get('/:id', (req, res) => {
     });
 });
 
+router.get('/mail/:cemail', (req, res) => {
+    Order.find({cemail: req.params.cemail}, (err, doc) => {
+        if (!err) {
+            if(doc.length)
+                res.send(doc);
+            else
+                return res.status(400).send(`No record with given email : ${req.params.cemail}`); 
+        }
+        else { console.log('Error in Retriving Order :' + JSON.stringify(err, undefined, 2)); }
+    });
+});
+
 router.post('/', (req, res) => {
     var ord = new Order({
         fname: req.body.fname,
