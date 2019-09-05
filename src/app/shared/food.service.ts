@@ -25,7 +25,7 @@ export class FoodService {
   };
   foods: Food[];
   cats: Category[];
-  baseUrl = "http://localhost:3200/";
+  baseUrl = "https://foozards-server.herokuapp.com/";
 
   getCategories() {
     return this.http.get(this.baseUrl + "categories");

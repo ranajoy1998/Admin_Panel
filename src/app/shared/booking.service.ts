@@ -20,7 +20,7 @@ export class BookingService {
   };
   
   bookings: Booking[];
-  baseUrl = "http://localhost:3200/";
+  baseUrl = "https://foozards-server.herokuapp.com/";
 
   getBookings() {
     return this.http.get(this.baseUrl + "orders");

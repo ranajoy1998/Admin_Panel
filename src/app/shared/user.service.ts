@@ -15,7 +15,7 @@ export class UserService {
   };
   
   users: User[];
-  baseUrl = "http://localhost:3200/api/";
+  baseUrl = "https://foozards-server.herokuapp.com/api/";
 
   getUsers() {
     return this.http.get(this.baseUrl + "users");

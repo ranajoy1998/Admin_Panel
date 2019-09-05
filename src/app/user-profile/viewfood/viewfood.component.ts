@@ -12,7 +12,7 @@ import { DomSanitizer } from '@angular/platform-browser';
   styleUrls: ['./viewfood.component.css']
 })
 export class ViewfoodComponent implements OnInit {
-  public apiurl = 'http://localhost:3200';
+  public apiurl = 'https://foozards-server.herokuapp.com';
   trustedUrl;
 
   constructor(private aduserService: AduserService, private router : Router, private foodService: FoodService, private sanitizer: DomSanitizer) {

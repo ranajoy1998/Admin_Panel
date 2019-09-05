@@ -8,7 +8,7 @@ import { Food } from 'src/app/shared/food.model';
 import { HttpClient } from '@angular/common/http';
 import { CategoryService } from 'src/app/shared/category.service';
 import { Category } from 'src/app/shared/category.model';
-const URL = 'http://localhost:3200/pics';
+const URL = 'https://foozards-server.herokuapp.com/pics';
 
 @Component({
   selector: 'app-addfood',
@@ -80,7 +80,7 @@ export class AddfoodComponent implements OnInit {
       this.selectedFood.fpic = form.value.fpic;
       const fd = new FormData();
       fd.append('image', this.selectedfile, this.selectedfile.name);
-      this.http.post('http://localhost:3200/pics', fd).subscribe(
+      this.http.post('https://foozards-server.herokuapp.com/pics', fd).subscribe(
         res => {
         }
       );
@@ -99,7 +99,7 @@ export class AddfoodComponent implements OnInit {
       this.selectedFood.fpic = form.value.fpic;
       const fd = new FormData();
       fd.append('image', this.selectedfile, this.selectedfile.name);
-      this.http.post('http://localhost:3200/pics', fd).subscribe(
+      this.http.post('https://foozards-server.herokuapp.com/pics', fd).subscribe(
         res => {
         }
       );
