@@ -11,7 +11,7 @@ import { User } from 'src/app/shared/user.model';
 })
 export class ViewusersComponent implements OnInit {
 
-  constructor(private aduserService: AduserService, private router : Router, private userService: UserService) { }
+  constructor(private aduserService: AduserService, private router : Router, public userService: UserService) { }
   
   ngOnInit() {
     if(this.aduserService.isLoggedIn())

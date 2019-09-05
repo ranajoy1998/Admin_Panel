@@ -10,7 +10,7 @@ import { Category } from 'src/app/shared/category.model';
   styleUrls: ['./viewcategory.component.css']
 })
 export class ViewcategoryComponent implements OnInit {
-  constructor(private aduserService: AduserService, private router : Router, private categoryService: CategoryService) { }
+  constructor(private aduserService: AduserService, private router : Router, public categoryService: CategoryService) { }
   
   ngOnInit() {
     if(this.aduserService.isLoggedIn())

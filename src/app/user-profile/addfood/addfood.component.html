@@ -7,7 +7,7 @@
         <label>Category Name</label>
         <!-- <input type="text" name="category_id" #category_id="ngModel" [(ngModel)]="foodService.SelectedFood.category_id" class="form-control" placeholder="Enter Category ID"> -->
         <select name="category_id" #category_id="ngModel" [(ngModel)]="foodService.SelectedFood.category_id" class="form-control"> 
-            <option [selected]="foodService.SelectedFood.category_id == 'select'" [value]="select">Select a Category</option>  
+            <option [selected]="foodService.SelectedFood.category_id == 'selected'" [value]="selected">Select a Category</option>  
             <option  *ngFor="let cat of categoryService.categories" [value]="cat.category_id">{{cat.category_name}}</option>
         </select>
         <small class="form-text text-muted">Should be an existing category.</small>

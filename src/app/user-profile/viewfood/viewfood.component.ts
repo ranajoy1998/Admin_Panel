@@ -15,7 +15,7 @@ export class ViewfoodComponent implements OnInit {
   public apiurl = 'https://foozards-server.herokuapp.com';
   trustedUrl;
 
-  constructor(private aduserService: AduserService, private router : Router, private foodService: FoodService, private sanitizer: DomSanitizer) {
+  constructor(private aduserService: AduserService, private router : Router, public foodService: FoodService, private sanitizer: DomSanitizer) {
     this.trustedUrl = this.sanitizer.bypassSecurityTrustUrl(this.apiurl);
   }
   

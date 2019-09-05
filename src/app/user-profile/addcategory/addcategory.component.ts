@@ -16,7 +16,7 @@ export class AddcategoryComponent implements OnInit {
     category_id: '',
     category_name: ''
   };
-  constructor(private aduserService: AduserService, private router : Router, private categoryService: CategoryService) { }
+  constructor(private aduserService: AduserService, private router : Router, public categoryService: CategoryService) { }
 
   ngOnInit() {
     if(this.aduserService.isLoggedIn())

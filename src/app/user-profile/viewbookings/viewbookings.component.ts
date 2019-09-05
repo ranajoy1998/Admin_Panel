@@ -11,7 +11,7 @@ import { Booking } from 'src/app/shared/booking.model';
 })
 export class ViewbookingsComponent implements OnInit {
 
-  constructor(private aduserService: AduserService, private router : Router, private bookingService: BookingService) { }
+  constructor(private aduserService: AduserService, private router : Router, public bookingService: BookingService) { }
   
   ngOnInit() {
     if(this.aduserService.isLoggedIn())

@@ -24,11 +24,12 @@ export class AddfoodComponent implements OnInit {
     fdesc: '',
     fpic: ''
   };
+  public selected;
   public selectedFood = new Food();
   selectedfile: File = null;
   public uploader: FileUploader = new FileUploader({url: URL, itemAlias: 'photo'});
 
-  constructor(private aduserService: AduserService, private router : Router, private foodService: FoodService, private categoryService: CategoryService, private http: HttpClient) { }
+  constructor(private aduserService: AduserService, private router : Router, public foodService: FoodService, public categoryService: CategoryService, private http: HttpClient) { }
 
   ngOnInit() {
     if(this.aduserService.isLoggedIn())
